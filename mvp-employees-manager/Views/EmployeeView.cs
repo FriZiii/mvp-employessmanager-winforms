@@ -13,12 +13,14 @@ namespace mvp_employees_manager.Views
 {
     public partial class EmployeeView : Form, IEmployeeView
     {
+        //Constructor
         public EmployeeView()
         {
             InitializeComponent();
             AssociateAndRaiseViewEvents();
         }
 
+        //Methods
         private void AssociateAndRaiseViewEvents()
         {
             //Events
@@ -34,6 +36,51 @@ namespace mvp_employees_manager.Views
             btnExport.Click += delegate { ExportEvent?.Invoke(this, EventArgs.Empty); };
             btnImport.Click += delegate { ImportEvent?.Invoke(this, EventArgs.Empty); };
             listEmployees.SelectedIndexChanged += delegate { ReadEvent?.Invoke(this, EventArgs.Empty); };
+        }
+
+        public void ShowNameError(string message)
+        {
+            errorProvider.SetError(tbName, message);
+        }
+
+        public void HideNameError()
+        {
+            errorProvider.SetError(tbName, string.Empty);
+        }
+
+        public void ShowSurnameError(string message)
+        {
+            errorProvider.SetError(tbSurname, message);
+        }
+
+        public void HideSurnameError()
+        {
+            errorProvider.SetError(tbSurname, string.Empty);
+        }
+
+        public void ShowContractTypeError(string message)
+        {
+            errorProvider.SetError(labelTypeOfContract, message);
+        }
+
+        public void HideContractTypeError()
+        {
+            errorProvider.SetError(labelTypeOfContract, string.Empty);
+        }
+
+        public void ShowPositionError(string message)
+        {
+            errorProvider.SetError(cbPosition, message);
+        }
+
+        public void HidePositionError()
+        {
+            errorProvider.SetError(cbPosition, string.Empty);
+        }
+
+        public void ClearAllError()
+        {
+            errorProvider.Clear();
         }
 
         //Properties
@@ -63,7 +110,7 @@ namespace mvp_employees_manager.Views
                         return rb.Text;
                     }
                 }
-                return string.Empty;
+                return null;
             }
             set
             {

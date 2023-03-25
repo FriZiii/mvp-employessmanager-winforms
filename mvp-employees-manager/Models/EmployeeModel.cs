@@ -21,19 +21,60 @@ namespace mvp_employees_manager.Models
 
         public EmployeeModel(string employeeName, string employeeSurname, DateTime birthDate, string contractType, string position, decimal salary)
         {
-            this.employeeName = employeeName;
-            this.employeeSurname = employeeSurname;
+            Name = employeeName;
+            Surname = employeeSurname;
             this.birthDate = birthDate;
-            this.contractType = contractType;
-            this.position = position;
+            ContractType = contractType;
+            Position = position;
             this.salary = salary;
         }
 
-        public string Name { get => employeeName; set => employeeName = value; }
-        public string Surname { get => employeeSurname; set => employeeSurname = value; }
+        public string Name 
+        {
+            get { return employeeName; }
+            set
+            {
+                if(string.IsNullOrEmpty(value))
+                    throw new ArgumentNullException(paramName: nameof(Name), message: "Name cannot be empty!");
+
+                employeeName = value;
+            }
+        }
+        public string Surname
+        {
+            get { return employeeSurname; }
+            set
+            {
+                if (string.IsNullOrEmpty(value))
+                    throw new ArgumentNullException(paramName: nameof(Surname), message: "Surname cannot be empty!");
+
+                employeeSurname = value;
+            }
+        }
         public DateTime BirthDate { get => birthDate; set => birthDate = value; }
-        public string ContractType { get => contractType; set => contractType = value; }
-        public string Position { get => position; set => position = value; }
+        public string ContractType
+        {
+            get { return contractType; }
+            set
+            {
+                if (string.IsNullOrEmpty(value))
+                    throw new ArgumentNullException(paramName: nameof(ContractType), message: "Contract type is required!");
+
+                contractType = value; 
+            }
+        }
+        public string Position
+        {
+            get { return position; }
+            set
+            {
+                if (string.IsNullOrEmpty(value))
+                    throw new ArgumentNullException(paramName: nameof(Position), message: "Position cannot be empty!");
+
+                position = value;
+            }
+        }
+
         public decimal Salary { get => salary; set => salary = value; }
 
         public override string ToString()

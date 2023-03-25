@@ -44,7 +44,7 @@
             radioButton1 = new RadioButton();
             tbDate = new DateTimePicker();
             label5 = new Label();
-            label4 = new Label();
+            labelTypeOfContract = new Label();
             label3 = new Label();
             tbSurname = new TextBox();
             label2 = new Label();
@@ -73,7 +73,7 @@
             leftBar.Controls.Add(radioButton1);
             leftBar.Controls.Add(tbDate);
             leftBar.Controls.Add(label5);
-            leftBar.Controls.Add(label4);
+            leftBar.Controls.Add(labelTypeOfContract);
             leftBar.Controls.Add(label3);
             leftBar.Controls.Add(tbSurname);
             leftBar.Controls.Add(label2);
@@ -82,7 +82,7 @@
             leftBar.Dock = DockStyle.Left;
             leftBar.Location = new Point(0, 0);
             leftBar.Name = "leftBar";
-            leftBar.Size = new Size(360, 579);
+            leftBar.Size = new Size(360, 569);
             leftBar.TabIndex = 0;
             // 
             // label7
@@ -240,16 +240,16 @@
             label5.TabIndex = 8;
             label5.Text = "Position";
             // 
-            // label4
+            // labelTypeOfContract
             // 
-            label4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            label4.AutoSize = true;
-            label4.Font = new Font("Nirmala UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(36, 197);
-            label4.Name = "label4";
-            label4.Size = new Size(126, 21);
-            label4.TabIndex = 6;
-            label4.Text = "Type of Contract:";
+            labelTypeOfContract.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            labelTypeOfContract.AutoSize = true;
+            labelTypeOfContract.Font = new Font("Nirmala UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            labelTypeOfContract.Location = new Point(36, 197);
+            labelTypeOfContract.Name = "labelTypeOfContract";
+            labelTypeOfContract.Size = new Size(126, 21);
+            labelTypeOfContract.TabIndex = 6;
+            labelTypeOfContract.Text = "Type of Contract:";
             // 
             // label3
             // 
@@ -313,7 +313,7 @@
             listEmployees.Location = new Point(360, 0);
             listEmployees.Margin = new Padding(0);
             listEmployees.Name = "listEmployees";
-            listEmployees.Size = new Size(762, 579);
+            listEmployees.Size = new Size(692, 569);
             listEmployees.TabIndex = 1;
             // 
             // errorProvider
@@ -321,12 +321,13 @@
             errorProvider.BlinkRate = 0;
             errorProvider.BlinkStyle = ErrorBlinkStyle.NeverBlink;
             errorProvider.ContainerControl = this;
+            errorProvider.Icon = (Icon)resources.GetObject("errorProvider.Icon");
             // 
             // EmployeeView
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1122, 579);
+            ClientSize = new Size(1052, 569);
             Controls.Add(listEmployees);
             Controls.Add(leftBar);
             Name = "EmployeeView";
@@ -342,7 +343,7 @@
 
         private Panel leftBar;
         private Label label5;
-        private Label label4;
+        private Label labelTypeOfContract;
         private Label label3;
         private TextBox tbSurname;
         private Label label2;

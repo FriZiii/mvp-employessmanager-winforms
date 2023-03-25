@@ -23,5 +23,19 @@ namespace mvp_employees_manager.Views
         event EventHandler ExportEvent;
         event EventHandler ImportEvent;
         event EventHandler ReadEvent;
+
+
+        //Methods
+        public void ShowNameError(string message);
+        public void ShowSurnameError(string message);
+        void ShowContractTypeError(string message);
+        void ShowPositionError(string message);
+
+        void HideNameError();
+        void HideSurnameError();
+        void HideContractTypeError();
+        void HidePositionError();
+
+        void ClearAllError();
     }
 }

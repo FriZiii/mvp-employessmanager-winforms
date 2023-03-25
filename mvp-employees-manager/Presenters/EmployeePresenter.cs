@@ -6,6 +6,7 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using System.Xml.Serialization;
 
 namespace mvp_employees_manager.Presenters
@@ -32,6 +33,7 @@ namespace mvp_employees_manager.Presenters
 
             if (model != null)
             {
+                _view.ClearAllError();
                 _view.EmployeeName = model.Name;
                 _view.EmployeeSurname = model.Surname;
                 _view.BirthDate = model.BirthDate;
@@ -51,13 +53,13 @@ namespace mvp_employees_manager.Presenters
             }
 
             //Folder browser dialog windows
-            SaveFileDialog saveFileDialog1 = new();
-            saveFileDialog1.Filter = "File XML (*.xml)|*.xml";
-            saveFileDialog1.Title = "Export employees list as XML";
+            SaveFileDialog saveFileDialog = new();
+            saveFileDialog.Filter = "File XML (*.xml)|*.xml";
+            saveFileDialog.Title = "Export employees list as XML";
             string path = string.Empty;
-            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
-                string filePath = saveFileDialog1.FileName;
+                string filePath = saveFileDialog.FileName;
                 path = filePath;
             }
 
@@ -76,7 +78,8 @@ namespace mvp_employees_manager.Presenters
         {
             //Folder browser dialog windows
             OpenFileDialog openFileDialog = new();
-            openFileDialog.Filter = "Pliki XML (*.xml)|*.xml";
+            openFileDialog.Filter = "File XML (*.xml)|*.xml";
+            openFileDialog.Title = "Import XML as employees list";
             openFileDialog.FilterIndex = 0;
             openFileDialog.RestoreDirectory = true;
 
@@ -120,8 +123,52 @@ namespace mvp_employees_manager.Presenters
 
         private void AddEmployee(object? sender, EventArgs e)
         {
-            EmployeeModel employee = new(_view.EmployeeName, _view.EmployeeSurname, _view.BirthDate, _view.ContractType, _view.Position, _view.Salary);
-            _view.EmployeesList.Items.Add(employee);
+            try
+            {
+                EmployeeModel employee = new(_view.EmployeeName, _view.EmployeeSurname, _view.BirthDate, _view.ContractType, _view.Position, _view.Salary);
+                _view.EmployeesList.Items.Add(employee);
+
+                _view.ClearAllError();
+            }
+            catch(ArgumentNullException error)
+            {
+                string errorMessage = error.Message[..(error.Message.IndexOf("!") + 1)];
+                if (error.ParamName == "Name")
+                {
+                    _view.ShowNameError(errorMessage);
+                }
+                else
+                {
+                    _view.HideNameError();
+                }
+                
+                if(error.ParamName == "Surname")
+                {
+                    _view.ShowSurnameError(errorMessage);
+                }
+                else
+                {
+                    _view.HideSurnameError();
+                }
+
+                if(error.ParamName == "ContractType")
+                {
+                    _view.ShowContractTypeError(errorMessage);
+                }
+                else
+                {
+                    _view.HideContractTypeError();
+                }
+
+                if(error.ParamName == "Position")
+                {
+                    _view.ShowPositionError(errorMessage);
+                }
+                else
+                {
+                    _view.HidePositionError();
+                }
+            }
         }
     }
 }
