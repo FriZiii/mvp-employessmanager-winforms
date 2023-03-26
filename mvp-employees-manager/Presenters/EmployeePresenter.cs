@@ -1,18 +1,12 @@
 ﻿using mvp_employees_manager.Models;
 using mvp_employees_manager.Views;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Xml.Serialization;
 
 namespace mvp_employees_manager.Presenters
 {
     public class EmployeePresenter
     {
+        //Fields
         private IEmployeeView _view;
 
         //Constructor
@@ -27,6 +21,7 @@ namespace mvp_employees_manager.Presenters
             _view.ReadEvent += ReadEmployee;
         }
 
+        //Methods
         private void ReadEmployee(object? sender, EventArgs e)
         {
             EmployeeModel? model = _view.EmployeesList.SelectedItem as EmployeeModel;

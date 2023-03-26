@@ -12,10 +12,10 @@ namespace mvp_employees_manager
         [STAThread]
         static void Main()
         {
-            // To customize application configuration such as set high DPI settings or default font,
-            // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
+
             IEmployeeView view = new EmployeeView();
+
             _ = new EmployeePresenter(view);
             Application.Run((Form)view);
         }

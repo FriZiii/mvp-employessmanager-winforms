@@ -313,7 +313,7 @@
             listEmployees.Location = new Point(360, 0);
             listEmployees.Margin = new Padding(0);
             listEmployees.Name = "listEmployees";
-            listEmployees.Size = new Size(692, 569);
+            listEmployees.Size = new Size(614, 569);
             listEmployees.TabIndex = 1;
             // 
             // errorProvider
@@ -327,7 +327,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1052, 569);
+            ClientSize = new Size(974, 569);
             Controls.Add(listEmployees);
             Controls.Add(leftBar);
             Name = "EmployeeView";

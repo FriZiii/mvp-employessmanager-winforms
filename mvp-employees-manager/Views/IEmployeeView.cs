@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace mvp_employees_manager.Views
+﻿namespace mvp_employees_manager.Views
 {
     public interface IEmployeeView
     {
@@ -35,7 +29,6 @@ namespace mvp_employees_manager.Views
         void HideSurnameError();
         void HideContractTypeError();
         void HidePositionError();
-
         void ClearAllError();
     }
 }

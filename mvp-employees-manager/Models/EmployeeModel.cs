@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace mvp_employees_manager.Models
+﻿namespace mvp_employees_manager.Models
 {
     public class EmployeeModel
     {
+        //Fields
         private string employeeName;
         private string employeeSurname;
         private DateTime birthDate;
@@ -15,10 +10,10 @@ namespace mvp_employees_manager.Models
         private string position;
         private decimal salary;
 
+        //Constructor
         public EmployeeModel()
         {
         }
-
         public EmployeeModel(string employeeName, string employeeSurname, DateTime birthDate, string contractType, string position, decimal salary)
         {
             Name = employeeName;
@@ -29,6 +24,7 @@ namespace mvp_employees_manager.Models
             this.salary = salary;
         }
 
+        //Properties
         public string Name 
         {
             get { return employeeName; }
@@ -74,9 +70,9 @@ namespace mvp_employees_manager.Models
                 position = value;
             }
         }
-
         public decimal Salary { get => salary; set => salary = value; }
 
+        //Methods
         public override string ToString()
         {
             return $"{employeeName}, {employeeSurname}, {birthDate}, {contractType}, {position},{salary}";
