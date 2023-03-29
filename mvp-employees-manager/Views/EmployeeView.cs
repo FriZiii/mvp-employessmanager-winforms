@@ -22,6 +22,7 @@
                     RemoveEvent?.Invoke(this, EventArgs.Empty);
                 }
             };
+            btnEdit.Click += delegate { EditEvent?.Invoke(this, EventArgs.Empty); };
             btnExport.Click += delegate { ExportEvent?.Invoke(this, EventArgs.Empty); };
             btnImport.Click += delegate { ImportEvent?.Invoke(this, EventArgs.Empty); };
             listEmployees.SelectedIndexChanged += delegate { ReadEvent?.Invoke(this, EventArgs.Empty); };
@@ -133,6 +134,7 @@
         //Events
         public event EventHandler AddEvent;
         public event EventHandler RemoveEvent;
+        public event EventHandler EditEvent;
         public event EventHandler ExportEvent;
         public event EventHandler ImportEvent;
         public event EventHandler ReadEvent;

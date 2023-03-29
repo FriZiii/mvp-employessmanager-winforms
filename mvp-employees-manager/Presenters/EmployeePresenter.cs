@@ -16,6 +16,7 @@ namespace mvp_employees_manager.Presenters
             //Subscribe event handler methods to view events
             _view.AddEvent += AddEmployee;
             _view.RemoveEvent += RemoveEmployee;
+            _view.EditEvent += EditEmployee;
             _view.ImportEvent += ImportEmployees;
             _view.ExportEvent += ExportEmployees;
             _view.ReadEvent += ReadEmployee;
@@ -54,8 +55,7 @@ namespace mvp_employees_manager.Presenters
             string path = string.Empty;
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
-                string filePath = saveFileDialog.FileName;
-                path = filePath;
+                path = saveFileDialog.FileName;
             }
 
             //Serialization
@@ -67,6 +67,7 @@ namespace mvp_employees_manager.Presenters
                     serializer.Serialize(fileStream, employees);
                 }
             }
+            MessageBox.Show("Employees export finished");
         }
 
         private void ImportEmployees(object? sender, EventArgs e)
@@ -104,6 +105,7 @@ namespace mvp_employees_manager.Presenters
                     }
                 }
             }
+            MessageBox.Show("Employees import finished");
         }
 
         private void RemoveEmployee(object? sender, EventArgs e)
@@ -163,6 +165,16 @@ namespace mvp_employees_manager.Presenters
                 {
                     _view.HidePositionError();
                 }
+            }
+        }
+
+        private void EditEmployee(object? sender, EventArgs e)
+        {
+            if (_view.EmployeesList.SelectedIndex != -1)
+            {
+                IEditView editView = EditView.GetInstance();
+                ListBox employeesList = _view.EmployeesList;
+                new EditPresenter(editView, _view.EmployeesList.SelectedIndex, ref employeesList);
             }
         }
     }

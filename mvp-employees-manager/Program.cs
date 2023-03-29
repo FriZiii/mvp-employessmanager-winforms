@@ -1,5 +1,4 @@
 using mvp_employees_manager.Presenters;
-using mvp_employees_manager.Models;
 using mvp_employees_manager.Views;
 
 namespace mvp_employees_manager

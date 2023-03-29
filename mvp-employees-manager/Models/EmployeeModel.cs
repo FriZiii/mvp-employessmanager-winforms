@@ -75,7 +75,7 @@
         //Methods
         public override string ToString()
         {
-            return $"{employeeName}, {employeeSurname}, {birthDate}, {contractType}, {position},{salary}";
+            return $"{employeeName}, {employeeSurname}, {birthDate}, {contractType}, {position}, {salary}";
         }
     }
 }

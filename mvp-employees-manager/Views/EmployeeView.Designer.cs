@@ -31,6 +31,7 @@
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EmployeeView));
             leftBar = new Panel();
+            btnEdit = new Button();
             label7 = new Label();
             btnImport = new Button();
             btnRemove = new Button();
@@ -60,6 +61,7 @@
             // leftBar
             // 
             leftBar.AutoScroll = true;
+            leftBar.Controls.Add(btnEdit);
             leftBar.Controls.Add(label7);
             leftBar.Controls.Add(btnImport);
             leftBar.Controls.Add(btnRemove);
@@ -82,15 +84,30 @@
             leftBar.Dock = DockStyle.Left;
             leftBar.Location = new Point(0, 0);
             leftBar.Name = "leftBar";
-            leftBar.Size = new Size(360, 569);
+            leftBar.Size = new Size(360, 614);
             leftBar.TabIndex = 0;
+            // 
+            // btnEdit
+            // 
+            btnEdit.Font = new Font("Nirmala UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnEdit.Image = (Image)resources.GetObject("btnEdit.Image");
+            btnEdit.ImageAlign = ContentAlignment.MiddleLeft;
+            btnEdit.Location = new Point(36, 455);
+            btnEdit.Name = "btnEdit";
+            btnEdit.RightToLeft = RightToLeft.No;
+            btnEdit.Size = new Size(275, 45);
+            btnEdit.TabIndex = 22;
+            btnEdit.Text = "Edit Employee";
+            btnEdit.TextAlign = ContentAlignment.MiddleRight;
+            btnEdit.TextImageRelation = TextImageRelation.TextBeforeImage;
+            btnEdit.UseVisualStyleBackColor = true;
             // 
             // label7
             // 
             label7.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label7.AutoSize = true;
             label7.Font = new Font("Nirmala UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            label7.Location = new Point(61, 20);
+            label7.Location = new Point(61, 21);
             label7.Name = "label7";
             label7.Size = new Size(234, 32);
             label7.TabIndex = 21;
@@ -100,53 +117,60 @@
             // 
             btnImport.Font = new Font("Nirmala UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnImport.Image = (Image)resources.GetObject("btnImport.Image");
-            btnImport.Location = new Point(176, 507);
+            btnImport.ImageAlign = ContentAlignment.MiddleLeft;
+            btnImport.Location = new Point(176, 557);
             btnImport.Name = "btnImport";
+            btnImport.RightToLeft = RightToLeft.No;
             btnImport.Size = new Size(135, 46);
             btnImport.TabIndex = 19;
             btnImport.Text = "Import";
             btnImport.TextAlign = ContentAlignment.MiddleRight;
-            btnImport.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnImport.TextImageRelation = TextImageRelation.TextBeforeImage;
             btnImport.UseVisualStyleBackColor = true;
             // 
             // btnRemove
             // 
             btnRemove.Font = new Font("Nirmala UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnRemove.Image = (Image)resources.GetObject("btnRemove.Image");
-            btnRemove.Location = new Point(36, 456);
+            btnRemove.ImageAlign = ContentAlignment.MiddleLeft;
+            btnRemove.Location = new Point(36, 506);
             btnRemove.Name = "btnRemove";
+            btnRemove.RightToLeft = RightToLeft.No;
             btnRemove.Size = new Size(275, 45);
             btnRemove.TabIndex = 18;
             btnRemove.Text = "Remove Employee";
             btnRemove.TextAlign = ContentAlignment.MiddleRight;
-            btnRemove.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnRemove.TextImageRelation = TextImageRelation.TextBeforeImage;
             btnRemove.UseVisualStyleBackColor = true;
             // 
             // btnExport
             // 
             btnExport.Font = new Font("Nirmala UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnExport.Image = (Image)resources.GetObject("btnExport.Image");
-            btnExport.Location = new Point(36, 507);
+            btnExport.ImageAlign = ContentAlignment.MiddleLeft;
+            btnExport.Location = new Point(36, 557);
             btnExport.Name = "btnExport";
+            btnExport.RightToLeft = RightToLeft.No;
             btnExport.Size = new Size(134, 46);
             btnExport.TabIndex = 20;
             btnExport.Text = "Export";
             btnExport.TextAlign = ContentAlignment.MiddleRight;
-            btnExport.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnExport.TextImageRelation = TextImageRelation.TextBeforeImage;
             btnExport.UseVisualStyleBackColor = true;
             // 
             // btnAdd
             // 
             btnAdd.Font = new Font("Nirmala UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnAdd.Image = (Image)resources.GetObject("btnAdd.Image");
-            btnAdd.Location = new Point(36, 405);
+            btnAdd.ImageAlign = ContentAlignment.MiddleLeft;
+            btnAdd.Location = new Point(36, 404);
             btnAdd.Name = "btnAdd";
             btnAdd.RightToLeft = RightToLeft.No;
             btnAdd.Size = new Size(275, 45);
             btnAdd.TabIndex = 17;
             btnAdd.Text = "Add Employee";
             btnAdd.TextAlign = ContentAlignment.MiddleRight;
-            btnAdd.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnAdd.TextImageRelation = TextImageRelation.TextBeforeImage;
             btnAdd.UseVisualStyleBackColor = true;
             // 
             // numSalary
@@ -313,7 +337,7 @@
             listEmployees.Location = new Point(360, 0);
             listEmployees.Margin = new Padding(0);
             listEmployees.Name = "listEmployees";
-            listEmployees.Size = new Size(614, 569);
+            listEmployees.Size = new Size(614, 614);
             listEmployees.TabIndex = 1;
             // 
             // errorProvider
@@ -327,7 +351,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(974, 569);
+            ClientSize = new Size(974, 614);
             Controls.Add(listEmployees);
             Controls.Add(leftBar);
             Name = "EmployeeView";
@@ -363,5 +387,6 @@
         private DateTimePicker tbDate;
         private ListBox listEmployees;
         private ErrorProvider errorProvider;
+        private Button btnEdit;
     }
 }
