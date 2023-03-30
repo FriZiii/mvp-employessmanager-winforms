@@ -38,40 +38,12 @@ namespace mvp_employees_manager.Presenters
             catch (ArgumentNullException error)
             {
                 string errorMessage = error.Message[..(error.Message.IndexOf("!") + 1)];
-                if (error.ParamName == "Name")
-                {
-                    _editView.ShowNameError(errorMessage);
-                }
-                else
-                {
-                    _editView.HideNameError();
-                }
+                _editView.GetType().GetMethod($"Show{error.ParamName}Error")?.Invoke(_editView, new object[] {errorMessage} );
 
-                if (error.ParamName == "Surname")
+                foreach(EmployeeModel.ErrorTypes errorType in Enum.GetValues(typeof(EmployeeModel.ErrorTypes)))
                 {
-                    _editView.ShowSurnameError(errorMessage);
-                }
-                else
-                {
-                    _editView.HideSurnameError();
-                }
-
-                if (error.ParamName == "ContractType")
-                {
-                    _editView.ShowContractTypeError(errorMessage);
-                }
-                else
-                {
-                    _editView.HideContractTypeError();
-                }
-
-                if (error.ParamName == "Position")
-                {
-                    _editView.ShowPositionError(errorMessage);
-                }
-                else
-                {
-                    _editView.HidePositionError();
+                    if(errorType.ToString() != error.ParamName)
+                        _editView.GetType().GetMethod($"Hide{errorType}Error")?.Invoke(_editView, null);
                 }
             }
         }

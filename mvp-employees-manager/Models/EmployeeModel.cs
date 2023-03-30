@@ -10,6 +10,16 @@
         private string position;
         private decimal salary;
 
+        public enum ErrorTypes
+        {
+            Name,
+            Surname,
+            BirthDate,
+            ContractType,
+            Position,
+            Salary
+        }
+
         //Constructor
         public EmployeeModel()
         {
