@@ -7,7 +7,7 @@ namespace mvp_employees_manager.Presenters
     public class EmployeePresenter
     {
         //Fields
-        private IEmployeeView _view;
+        private readonly IEmployeeView _view;
 
         //Constructor
         public EmployeePresenter(IEmployeeView view)
@@ -25,9 +25,7 @@ namespace mvp_employees_manager.Presenters
         //Methods
         private void ReadEmployee(object? sender, EventArgs e)
         {
-            EmployeeModel? model = _view.EmployeesList.SelectedItem as EmployeeModel;
-
-            if (model != null)
+            if (_view.EmployeesList.SelectedItem is EmployeeModel model)
             {
                 _view.ClearAllError();
                 _view.EmployeeName = model.Name;
@@ -49,9 +47,11 @@ namespace mvp_employees_manager.Presenters
             }
 
             //Folder browser dialog windows
-            SaveFileDialog saveFileDialog = new();
-            saveFileDialog.Filter = "File XML (*.xml)|*.xml";
-            saveFileDialog.Title = "Export employees list as XML";
+            SaveFileDialog saveFileDialog = new()
+            {
+                Filter = "File XML (*.xml)|*.xml",
+                Title = "Export employees list as XML"
+            };
             string path = string.Empty;
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
@@ -71,13 +71,16 @@ namespace mvp_employees_manager.Presenters
 
         private void ImportEmployees(object? sender, EventArgs e)
         {
-            //Folder browser dialog windows
-            OpenFileDialog openFileDialog = new();
-            openFileDialog.Filter = "File XML (*.xml)|*.xml";
-            openFileDialog.Title = "Import XML as employees list";
-            openFileDialog.FilterIndex = 0;
-            openFileDialog.RestoreDirectory = true;
+            //Folder browser dialog config
+            OpenFileDialog openFileDialog = new()
+            {
+                Filter = "File XML (*.xml)|*.xml",
+                Title = "Import XML as employees list",
+                FilterIndex = 0,
+                RestoreDirectory = true
+            };
 
+            //Getting path
             string path = string.Empty;
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
@@ -144,7 +147,7 @@ namespace mvp_employees_manager.Presenters
             {
                 IEditView editView = EditView.GetInstance();
                 ListBox employeesList = _view.EmployeesList;
-                new EditPresenter(editView, _view.EmployeesList.SelectedIndex, ref employeesList);
+                _ = new EditPresenter(editView, _view.EmployeesList.SelectedIndex, ref employeesList);
             }
         }
     }

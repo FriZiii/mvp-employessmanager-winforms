@@ -6,9 +6,9 @@ namespace mvp_employees_manager.Presenters
     public class EditPresenter
     {
         //Fields
-        private IEditView _editView;
-        private ListBox _listBox;
-        private int _index;
+        private readonly IEditView _editView;
+        private readonly ListBox _listBox;
+        private readonly int _index;
 
         //Constructor
         public EditPresenter(IEditView editView, int index, ref ListBox listBox)
