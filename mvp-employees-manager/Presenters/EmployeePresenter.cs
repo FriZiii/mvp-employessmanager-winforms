@@ -67,7 +67,6 @@ namespace mvp_employees_manager.Presenters
                     serializer.Serialize(fileStream, employees);
                 }
             }
-            MessageBox.Show("Employees export finished");
         }
 
         private void ImportEmployees(object? sender, EventArgs e)
@@ -105,7 +104,6 @@ namespace mvp_employees_manager.Presenters
                     }
                 }
             }
-            MessageBox.Show("Employees import finished");
         }
 
         private void RemoveEmployee(object? sender, EventArgs e)

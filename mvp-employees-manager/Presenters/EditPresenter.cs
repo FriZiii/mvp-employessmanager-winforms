@@ -18,7 +18,7 @@ namespace mvp_employees_manager.Presenters
             _listBox = listBox;
             _index = index;
 
-            //Events
+            //Subscribe event handler methods to view events
             _editView.ConfirmEvent += ConfirmEdit;
             _editView.CancelEvent += CancelEdit;
 

@@ -10,8 +10,6 @@
         }
         private void AssociateAndRaiseViewEvents()
         {
-            btnClose.Click += delegate { this.Close(); };
-            btnMinimize.Click += delegate { this.WindowState = FormWindowState.Minimized; };
             btnConfirm.Click += delegate { ConfirmEvent?.Invoke(this, EventArgs.Empty); };
             btnCancel.Click += delegate { CancelEvent?.Invoke(this, EventArgs.Empty); };
         }

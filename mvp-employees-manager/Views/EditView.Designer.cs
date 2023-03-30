@@ -44,12 +44,10 @@
             label2 = new Label();
             tbName = new TextBox();
             label1 = new Label();
-            btnClose = new Button();
             btnConfirm = new Button();
             btnCancel = new Button();
             label7 = new Label();
             errorProvider = new ErrorProvider(components);
-            btnMinimize = new Button();
             ((System.ComponentModel.ISupportInitialize)numSalary).BeginInit();
             ((System.ComponentModel.ISupportInitialize)errorProvider).BeginInit();
             SuspendLayout();
@@ -58,7 +56,7 @@
             // 
             numSalary.Font = new Font("Nirmala UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             numSalary.Increment = new decimal(new int[] { 100, 0, 0, 0 });
-            numSalary.Location = new Point(110, 363);
+            numSalary.Location = new Point(110, 350);
             numSalary.Maximum = new decimal(new int[] { 100000, 0, 0, 0 });
             numSalary.Minimum = new decimal(new int[] { 3500, 0, 0, 0 });
             numSalary.Name = "numSalary";
@@ -71,7 +69,7 @@
             label6.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label6.AutoSize = true;
             label6.Font = new Font("Nirmala UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.Location = new Point(24, 365);
+            label6.Location = new Point(24, 352);
             label6.Name = "label6";
             label6.Size = new Size(54, 21);
             label6.TabIndex = 29;
@@ -82,7 +80,7 @@
             cbPosition.Font = new Font("Nirmala UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             cbPosition.FormattingEnabled = true;
             cbPosition.Items.AddRange(new object[] { "Back-end dev", "Front-end dev", "Full-stack dev", "UI/UX designer", "Software engineer", "Data scientist", "Network architect", "Desk analyst" });
-            cbPosition.Location = new Point(110, 323);
+            cbPosition.Location = new Point(110, 310);
             cbPosition.Name = "cbPosition";
             cbPosition.Size = new Size(187, 29);
             cbPosition.TabIndex = 28;
@@ -91,7 +89,7 @@
             // 
             radioButton3.AutoSize = true;
             radioButton3.Font = new Font("Nirmala UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            radioButton3.Location = new Point(56, 291);
+            radioButton3.Location = new Point(56, 278);
             radioButton3.Name = "radioButton3";
             radioButton3.Size = new Size(250, 25);
             radioButton3.TabIndex = 27;
@@ -103,7 +101,7 @@
             // 
             radioButton2.AutoSize = true;
             radioButton2.Font = new Font("Nirmala UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            radioButton2.Location = new Point(56, 260);
+            radioButton2.Location = new Point(56, 247);
             radioButton2.Name = "radioButton2";
             radioButton2.Size = new Size(149, 25);
             radioButton2.TabIndex = 26;
@@ -115,7 +113,7 @@
             // 
             radioButton1.AutoSize = true;
             radioButton1.Font = new Font("Nirmala UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            radioButton1.Location = new Point(56, 229);
+            radioButton1.Location = new Point(56, 216);
             radioButton1.Name = "radioButton1";
             radioButton1.Size = new Size(197, 25);
             radioButton1.TabIndex = 25;
@@ -128,7 +126,7 @@
             tbDate.DropDownAlign = LeftRightAlignment.Right;
             tbDate.Font = new Font("Nirmala UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             tbDate.Format = DateTimePickerFormat.Short;
-            tbDate.Location = new Point(109, 158);
+            tbDate.Location = new Point(109, 145);
             tbDate.Name = "tbDate";
             tbDate.RightToLeft = RightToLeft.No;
             tbDate.Size = new Size(188, 29);
@@ -139,7 +137,7 @@
             label5.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label5.AutoSize = true;
             label5.Font = new Font("Nirmala UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.Location = new Point(24, 326);
+            label5.Location = new Point(24, 313);
             label5.Name = "label5";
             label5.Size = new Size(65, 21);
             label5.TabIndex = 23;
@@ -150,7 +148,7 @@
             labelTypeOfContract.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             labelTypeOfContract.AutoSize = true;
             labelTypeOfContract.Font = new Font("Nirmala UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            labelTypeOfContract.Location = new Point(24, 205);
+            labelTypeOfContract.Location = new Point(24, 192);
             labelTypeOfContract.Name = "labelTypeOfContract";
             labelTypeOfContract.Size = new Size(126, 21);
             labelTypeOfContract.TabIndex = 22;
@@ -161,7 +159,7 @@
             label3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label3.AutoSize = true;
             label3.Font = new Font("Nirmala UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(24, 164);
+            label3.Location = new Point(24, 151);
             label3.Name = "label3";
             label3.Size = new Size(79, 21);
             label3.TabIndex = 21;
@@ -170,7 +168,7 @@
             // tbSurname
             // 
             tbSurname.Font = new Font("Nirmala UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            tbSurname.Location = new Point(110, 119);
+            tbSurname.Location = new Point(110, 106);
             tbSurname.Name = "tbSurname";
             tbSurname.Size = new Size(187, 29);
             tbSurname.TabIndex = 20;
@@ -180,7 +178,7 @@
             label2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label2.AutoSize = true;
             label2.Font = new Font("Nirmala UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(24, 122);
+            label2.Location = new Point(24, 109);
             label2.Name = "label2";
             label2.Size = new Size(73, 21);
             label2.TabIndex = 19;
@@ -189,7 +187,7 @@
             // tbName
             // 
             tbName.Font = new Font("Nirmala UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            tbName.Location = new Point(109, 79);
+            tbName.Location = new Point(109, 66);
             tbName.Name = "tbName";
             tbName.Size = new Size(188, 29);
             tbName.TabIndex = 18;
@@ -199,32 +197,22 @@
             label1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label1.AutoSize = true;
             label1.Font = new Font("Nirmala UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(24, 82);
+            label1.Location = new Point(24, 69);
             label1.Name = "label1";
             label1.Size = new Size(52, 21);
             label1.TabIndex = 17;
             label1.Text = "Name";
             // 
-            // btnClose
-            // 
-            btnClose.FlatAppearance.BorderSize = 0;
-            btnClose.FlatStyle = FlatStyle.Flat;
-            btnClose.Image = (Image)resources.GetObject("btnClose.Image");
-            btnClose.Location = new Point(299, 0);
-            btnClose.Name = "btnClose";
-            btnClose.Size = new Size(27, 27);
-            btnClose.TabIndex = 31;
-            btnClose.UseVisualStyleBackColor = true;
-            // 
             // btnConfirm
             // 
+            btnConfirm.FlatStyle = FlatStyle.Flat;
             btnConfirm.Font = new Font("Nirmala UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnConfirm.Image = (Image)resources.GetObject("btnConfirm.Image");
             btnConfirm.ImageAlign = ContentAlignment.MiddleLeft;
-            btnConfirm.Location = new Point(164, 415);
+            btnConfirm.Location = new Point(164, 402);
             btnConfirm.Name = "btnConfirm";
             btnConfirm.RightToLeft = RightToLeft.No;
-            btnConfirm.Size = new Size(134, 46);
+            btnConfirm.Size = new Size(133, 46);
             btnConfirm.TabIndex = 33;
             btnConfirm.Text = "Confirm";
             btnConfirm.TextAlign = ContentAlignment.MiddleRight;
@@ -233,12 +221,13 @@
             // 
             // btnCancel
             // 
+            btnCancel.FlatStyle = FlatStyle.Flat;
             btnCancel.Font = new Font("Nirmala UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnCancel.Image = (Image)resources.GetObject("btnCancel.Image");
             btnCancel.ImageAlign = ContentAlignment.MiddleLeft;
-            btnCancel.Location = new Point(24, 415);
+            btnCancel.Location = new Point(24, 402);
             btnCancel.Name = "btnCancel";
-            btnCancel.Size = new Size(134, 46);
+            btnCancel.Size = new Size(133, 46);
             btnCancel.TabIndex = 34;
             btnCancel.Text = "Cancel";
             btnCancel.TextAlign = ContentAlignment.MiddleRight;
@@ -250,7 +239,7 @@
             label7.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label7.AutoSize = true;
             label7.Font = new Font("Nirmala UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            label7.Location = new Point(65, 30);
+            label7.Location = new Point(65, 17);
             label7.Name = "label7";
             label7.Size = new Size(201, 32);
             label7.TabIndex = 35;
@@ -258,30 +247,20 @@
             // 
             // errorProvider
             // 
+            errorProvider.BlinkRate = 0;
+            errorProvider.BlinkStyle = ErrorBlinkStyle.NeverBlink;
             errorProvider.ContainerControl = this;
             errorProvider.Icon = (Icon)resources.GetObject("errorProvider.Icon");
-            // 
-            // btnMinimize
-            // 
-            btnMinimize.FlatAppearance.BorderSize = 0;
-            btnMinimize.FlatStyle = FlatStyle.Flat;
-            btnMinimize.Image = (Image)resources.GetObject("btnMinimize.Image");
-            btnMinimize.Location = new Point(272, 0);
-            btnMinimize.Name = "btnMinimize";
-            btnMinimize.Size = new Size(27, 27);
-            btnMinimize.TabIndex = 36;
-            btnMinimize.UseVisualStyleBackColor = true;
             // 
             // EditView
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(326, 473);
-            Controls.Add(btnMinimize);
+            BackColor = Color.White;
+            ClientSize = new Size(326, 464);
             Controls.Add(label7);
             Controls.Add(btnCancel);
             Controls.Add(btnConfirm);
-            Controls.Add(btnClose);
             Controls.Add(numSalary);
             Controls.Add(label6);
             Controls.Add(cbPosition);
@@ -296,7 +275,6 @@
             Controls.Add(label2);
             Controls.Add(tbName);
             Controls.Add(label1);
-            FormBorderStyle = FormBorderStyle.None;
             Name = "EditView";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "EditView";
@@ -322,11 +300,9 @@
         private Label label2;
         private TextBox tbName;
         private Label label1;
-        private Button btnClose;
         private Button btnConfirm;
         private Button btnCancel;
         private Label label7;
         private ErrorProvider errorProvider;
-        private Button btnMinimize;
     }
 }
