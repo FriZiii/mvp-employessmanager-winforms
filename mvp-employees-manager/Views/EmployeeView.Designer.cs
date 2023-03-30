@@ -95,7 +95,7 @@
             btnEdit.Font = new Font("Nirmala UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnEdit.Image = (Image)resources.GetObject("btnEdit.Image");
             btnEdit.ImageAlign = ContentAlignment.MiddleLeft;
-            btnEdit.Location = new Point(35, 450);
+            btnEdit.Location = new Point(34, 450);
             btnEdit.Name = "btnEdit";
             btnEdit.RightToLeft = RightToLeft.No;
             btnEdit.Size = new Size(273, 45);
@@ -110,11 +110,13 @@
             label7.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label7.AutoSize = true;
             label7.Font = new Font("Nirmala UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            label7.Location = new Point(58, 18);
+            label7.ImageAlign = ContentAlignment.MiddleRight;
+            label7.Location = new Point(56, 18);
             label7.Name = "label7";
             label7.Size = new Size(234, 32);
             label7.TabIndex = 21;
             label7.Text = "Employee Manager";
+            label7.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // btnImport
             // 
@@ -122,7 +124,7 @@
             btnImport.Font = new Font("Nirmala UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnImport.Image = (Image)resources.GetObject("btnImport.Image");
             btnImport.ImageAlign = ContentAlignment.MiddleLeft;
-            btnImport.Location = new Point(175, 552);
+            btnImport.Location = new Point(174, 552);
             btnImport.Name = "btnImport";
             btnImport.RightToLeft = RightToLeft.No;
             btnImport.Size = new Size(133, 46);
@@ -138,7 +140,7 @@
             btnRemove.Font = new Font("Nirmala UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnRemove.Image = (Image)resources.GetObject("btnRemove.Image");
             btnRemove.ImageAlign = ContentAlignment.MiddleLeft;
-            btnRemove.Location = new Point(35, 501);
+            btnRemove.Location = new Point(34, 501);
             btnRemove.Name = "btnRemove";
             btnRemove.RightToLeft = RightToLeft.No;
             btnRemove.Size = new Size(273, 45);
@@ -154,7 +156,7 @@
             btnExport.Font = new Font("Nirmala UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnExport.Image = (Image)resources.GetObject("btnExport.Image");
             btnExport.ImageAlign = ContentAlignment.MiddleLeft;
-            btnExport.Location = new Point(35, 552);
+            btnExport.Location = new Point(34, 552);
             btnExport.Name = "btnExport";
             btnExport.RightToLeft = RightToLeft.No;
             btnExport.Size = new Size(133, 46);
@@ -170,7 +172,7 @@
             btnAdd.Font = new Font("Nirmala UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnAdd.Image = (Image)resources.GetObject("btnAdd.Image");
             btnAdd.ImageAlign = ContentAlignment.MiddleLeft;
-            btnAdd.Location = new Point(35, 399);
+            btnAdd.Location = new Point(34, 399);
             btnAdd.Name = "btnAdd";
             btnAdd.RightToLeft = RightToLeft.No;
             btnAdd.Size = new Size(273, 45);
@@ -184,7 +186,7 @@
             // 
             numSalary.Font = new Font("Nirmala UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             numSalary.Increment = new decimal(new int[] { 100, 0, 0, 0 });
-            numSalary.Location = new Point(121, 353);
+            numSalary.Location = new Point(120, 353);
             numSalary.Maximum = new decimal(new int[] { 100000, 0, 0, 0 });
             numSalary.Minimum = new decimal(new int[] { 3500, 0, 0, 0 });
             numSalary.Name = "numSalary";
@@ -197,7 +199,7 @@
             label6.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label6.AutoSize = true;
             label6.Font = new Font("Nirmala UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.Location = new Point(35, 355);
+            label6.Location = new Point(34, 355);
             label6.Name = "label6";
             label6.Size = new Size(54, 21);
             label6.TabIndex = 15;
@@ -208,7 +210,7 @@
             cbPosition.Font = new Font("Nirmala UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             cbPosition.FormattingEnabled = true;
             cbPosition.Items.AddRange(new object[] { "Back-end dev", "Front-end dev", "Full-stack dev", "UI/UX designer", "Software engineer", "Data scientist", "Network architect", "Desk analyst" });
-            cbPosition.Location = new Point(121, 313);
+            cbPosition.Location = new Point(120, 313);
             cbPosition.Name = "cbPosition";
             cbPosition.Size = new Size(187, 29);
             cbPosition.TabIndex = 14;
@@ -217,7 +219,7 @@
             // 
             radioButton3.AutoSize = true;
             radioButton3.Font = new Font("Nirmala UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            radioButton3.Location = new Point(67, 281);
+            radioButton3.Location = new Point(66, 281);
             radioButton3.Name = "radioButton3";
             radioButton3.Size = new Size(250, 25);
             radioButton3.TabIndex = 12;
@@ -229,7 +231,7 @@
             // 
             radioButton2.AutoSize = true;
             radioButton2.Font = new Font("Nirmala UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            radioButton2.Location = new Point(67, 250);
+            radioButton2.Location = new Point(66, 250);
             radioButton2.Name = "radioButton2";
             radioButton2.Size = new Size(149, 25);
             radioButton2.TabIndex = 11;
@@ -241,7 +243,7 @@
             // 
             radioButton1.AutoSize = true;
             radioButton1.Font = new Font("Nirmala UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            radioButton1.Location = new Point(67, 219);
+            radioButton1.Location = new Point(66, 219);
             radioButton1.Name = "radioButton1";
             radioButton1.Size = new Size(197, 25);
             radioButton1.TabIndex = 10;
@@ -254,7 +256,7 @@
             tbDate.DropDownAlign = LeftRightAlignment.Right;
             tbDate.Font = new Font("Nirmala UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             tbDate.Format = DateTimePickerFormat.Short;
-            tbDate.Location = new Point(120, 148);
+            tbDate.Location = new Point(119, 148);
             tbDate.Name = "tbDate";
             tbDate.RightToLeft = RightToLeft.No;
             tbDate.Size = new Size(188, 29);
@@ -265,7 +267,7 @@
             label5.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label5.AutoSize = true;
             label5.Font = new Font("Nirmala UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.Location = new Point(35, 316);
+            label5.Location = new Point(34, 316);
             label5.Name = "label5";
             label5.Size = new Size(65, 21);
             label5.TabIndex = 8;
@@ -276,7 +278,7 @@
             labelTypeOfContract.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             labelTypeOfContract.AutoSize = true;
             labelTypeOfContract.Font = new Font("Nirmala UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            labelTypeOfContract.Location = new Point(35, 195);
+            labelTypeOfContract.Location = new Point(34, 195);
             labelTypeOfContract.Name = "labelTypeOfContract";
             labelTypeOfContract.Size = new Size(126, 21);
             labelTypeOfContract.TabIndex = 6;
@@ -287,7 +289,7 @@
             label3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label3.AutoSize = true;
             label3.Font = new Font("Nirmala UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(35, 154);
+            label3.Location = new Point(34, 154);
             label3.Name = "label3";
             label3.Size = new Size(79, 21);
             label3.TabIndex = 4;
@@ -297,7 +299,7 @@
             // 
             tbSurname.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             tbSurname.Font = new Font("Nirmala UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            tbSurname.Location = new Point(121, 109);
+            tbSurname.Location = new Point(120, 109);
             tbSurname.Name = "tbSurname";
             tbSurname.Size = new Size(187, 29);
             tbSurname.TabIndex = 3;
@@ -307,7 +309,7 @@
             label2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label2.AutoSize = true;
             label2.Font = new Font("Nirmala UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(35, 112);
+            label2.Location = new Point(34, 112);
             label2.Name = "label2";
             label2.Size = new Size(73, 21);
             label2.TabIndex = 2;
@@ -317,7 +319,7 @@
             // 
             tbName.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             tbName.Font = new Font("Nirmala UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            tbName.Location = new Point(120, 69);
+            tbName.Location = new Point(119, 69);
             tbName.Name = "tbName";
             tbName.Size = new Size(188, 29);
             tbName.TabIndex = 1;
@@ -327,7 +329,7 @@
             label1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label1.AutoSize = true;
             label1.Font = new Font("Nirmala UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(35, 72);
+            label1.Location = new Point(34, 72);
             label1.Name = "label1";
             label1.Size = new Size(52, 21);
             label1.TabIndex = 0;
@@ -361,8 +363,10 @@
             ClientSize = new Size(974, 609);
             Controls.Add(listEmployees);
             Controls.Add(leftBar);
+            Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "EmployeeView";
-            Text = "EmployeeView";
+            Text = "Employee Manager";
             leftBar.ResumeLayout(false);
             leftBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)numSalary).EndInit();

@@ -239,7 +239,7 @@
             label7.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label7.AutoSize = true;
             label7.Font = new Font("Nirmala UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            label7.Location = new Point(65, 17);
+            label7.Location = new Point(64, 17);
             label7.Name = "label7";
             label7.Size = new Size(201, 32);
             label7.TabIndex = 35;
@@ -275,9 +275,10 @@
             Controls.Add(label2);
             Controls.Add(tbName);
             Controls.Add(label1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "EditView";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "EditView";
+            Text = "Employee Manager";
             ((System.ComponentModel.ISupportInitialize)numSalary).EndInit();
             ((System.ComponentModel.ISupportInitialize)errorProvider).EndInit();
             ResumeLayout(false);
